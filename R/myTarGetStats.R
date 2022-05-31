@@ -230,10 +230,10 @@ myTarGetStats <-
     if (api_version == 'v2') {
       
       # check period
-      if ( as.Date(date_from) < (Sys.Date() -  92) ) {
-        message("You can get data only by last 92 days.")
-        message("Date from convert to ", Sys.Date() -  92)
-        date_from <- Sys.Date() -  92
+      if ( as.Date(date_from) < (Sys.Date() -  365) ) {
+        message("You can get data only by last 365 days.")
+        message("Date from convert to ", Sys.Date() -  365)
+        date_from <- Sys.Date() -  365
       }
       
       message("Authorize.")
